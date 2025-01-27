@@ -1,0 +1,56 @@
+:root {
+
+    --principale: #F1641E;
+    --secondario: #FFFFFF;
+    --terziario: #e9e9e9;
+
+}
+
+body {
+
+    background-color: var(--secondario);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--principale);
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+}
+
+* {
+
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+
+}
+
+/* navbar */
+
+.navbar-custom {
+
+    background-color: var(--principale);
+
+}
+
+.button-custom {
+
+    background-color: var(--terziario);
+    border-radius: 30px;
+    border-color: black;
+    color: black;
+    font-weight: 100;
+    
+}
