@@ -1,6 +1,6 @@
 <x-layout>
     <div class="container-fluid mt-5">
-        <div class="row justify-content-center text-center min-vh-100">
+        <div class="row justify-content-center text-center">
             <div class="col-12">
                 <h1 class="display-4">
                     Crea un nuovo articolo
@@ -8,10 +8,10 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center text-center min-vh-100">
-            <div class="col-12">
-                <livewire:create-article-form />
+    <div class="container-fluid mt-3 mb-5">
+        <div class="row justify-content-center ">
+            <div class="col-6">
+                <livewire:create-article-form  />
             </div>
         </div>
     </div>

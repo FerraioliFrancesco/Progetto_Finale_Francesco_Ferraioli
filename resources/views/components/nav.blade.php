@@ -40,7 +40,8 @@
                 @else  
                 <div class="nav-item mx-3">
                     <p>Ciao {{Auth::user()->name}}</p>    
-                </div>  
+                    <a class="nav-link" href="{{route("article.create")}}">Crea annuncio</a>
+                </div>
                 <form action="{{route("logout")}}" method="POST">
                     @csrf
                     <button data-mdb-ripple-init type="submit" class="btn btn-bg px-3 me-2">
