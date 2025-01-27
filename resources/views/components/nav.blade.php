@@ -19,21 +19,35 @@
             <!-- Left links -->
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">HomePage</a>
+                    <a class="nav-link" href="{{route("home")}}">HomePage</a>
                 </li>
             </ul>
 
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
-                <button data-mdb-ripple-init type="button" class="btn btn-bg px-3 me-2">
-                    Login
-                </button>
-                <button data-mdb-ripple-init type="button" class="btn btn-dark me-3">
-                    Sign up for free
-                </button>
-                <a data-mdb-ripple-init class="btn btn-dark px-3" href="https://github.com/mdbootstrap/mdb-ui-kit"
-                    role="button"><i class="fab fa-github"></i></a>
+                @guest
+                <a href="{{route("login")}}">
+                    <button data-mdb-ripple-init type="button" class="btn btn-bg px-3 me-2">
+                        <i class="fa-solid fa-right-to-bracket fa-2x"></i>
+                    </button>    
+                </a>
+                <a href="{{route("register")}}">
+                    <button data-mdb-ripple-init type="button" class="btn btn-bg px-3 me-2">
+                        <i class="fa-solid fa-user-plus fa-2x"></i>
+                    </button>    
+                </a>
+                @else  
+                <div class="nav-item mx-3">
+                    <p>Ciao {{Auth::user()->name}}</p>    
+                </div>  
+                <form action="{{route("logout")}}" method="POST">
+                    @csrf
+                    <button data-mdb-ripple-init type="submit" class="btn btn-bg px-3 me-2">
+                        <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+                    </button>
+                </form>
+                @endguest
             </div>
         </div>
         <!-- Collapsible wrapper -->
