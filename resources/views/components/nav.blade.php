@@ -26,6 +26,7 @@
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
+                <a class="nav-link" href="{{ route('article.index')}}">Tutti gli articoli</a>
                 @guest
                 <a href="{{route("login")}}">
                     <button data-mdb-ripple-init type="button" class="btn btn-bg px-3 me-2">

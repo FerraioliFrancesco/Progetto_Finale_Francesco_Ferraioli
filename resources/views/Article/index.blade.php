@@ -1,15 +1,8 @@
 <x-layout>
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center text-center mt-5">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-4">
-                    @guest
-                        Presto.it
-                    @else
-                        Benvenuto {{ Auth::user()->name }} su Presto.it!
-                    @endguest
-                </h1>
-                <a href="{{ route('article.create') }}" class="btn btn-primary">Inserisci annuncio</a>
+                <h1 class="display-1">Tutti gli Articoli</h1>
             </div>
         </div>
         <div class="row justify-content-center text-center">
@@ -29,6 +22,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="col-12">
+                {{ $articles->links() }}
+            </div>
         </div>
     </div>
 </x-layout>
