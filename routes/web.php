@@ -6,4 +6,6 @@ use App\Http\Controllers\ArticleController;
 
 Route::get('/', [PublicController::class, 'home'])->name('home');
 
-Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
+});

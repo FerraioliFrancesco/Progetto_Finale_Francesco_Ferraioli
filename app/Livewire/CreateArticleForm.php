@@ -8,15 +8,17 @@ use Illuminate\Support\Facades\Auth;
 
 class CreateArticleForm extends Component
 {
-    #[Validate('required|min:5')]
-    public $title;
-    #[Validate('required|min:10')]
-    public $description;
-    #[Validate('required|numeric')]
-    public $price;
-    #[Validate('required')]
-    public $category;
 
+    #[Validate('required', message: "Titolo obbligatorio")]
+    #[Validate('min:5', message: "minimo 5 caratteri")]
+    public $title;
+    #[Validate('required', message: "Descrizione obbligatorio")]
+    #[Validate('min:10', message: "minimo 10 caratteri")]
+    public $description;
+    #[Validate('required', message: "Prezzo obbligatorio")]
+    public $price;
+
+    public $category;
     public $article;
 
     public function save(){
@@ -29,6 +31,9 @@ class CreateArticleForm extends Component
             'category_id' => $this->category,
             'user_id' => Auth::id()
         ]);
+
+        $this->reset();
+        session()->flash('message', 'Annuncio creato con successo');
     }
 
     public function render()

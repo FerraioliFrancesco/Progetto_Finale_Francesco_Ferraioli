@@ -40,7 +40,7 @@
                 @else  
                 <div class="nav-item mx-3">
                     <p>Ciao {{Auth::user()->name}}</p>    
-                    <a class="nav-link" href="{{route("article.create")}}">Crea annuncio</a>
+                    <a class="nav-link" href="{{route("article.create")}}">Inserisci annuncio</a>
                 </div>
                 <form action="{{route("logout")}}" method="POST">
                     @csrf

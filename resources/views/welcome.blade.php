@@ -7,8 +7,10 @@
                     Presto.it
                     @else    
                     Benvenuto {{Auth::user()->name}} su Presto.it!
+
                     @endguest
                 </h1>
+                <a href="{{route('article.create')}}" class="btn btn-primary">Inserisci annuncio</a>
             </div>
         </div>
     </div>
