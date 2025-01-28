@@ -64,14 +64,14 @@
 {{-- dropdown laterale  --}}
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categorie</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Categorie</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="">
             @foreach ($categories as $category)
-              <li><a class="list-unlisted text-capitalize" href="{{route("article.byCategory",['category'=>$category])}}">{{$category->name}}</a></li>
+            <li><a class="list-unlisted text-capitalize" href="{{route("article.byCategory",['category'=>$category])}}">{{$category->name}}</a></li>
             @endforeach
         </ul>
     </div>
-  </div>
+</div>
