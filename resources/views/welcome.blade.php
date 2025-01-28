@@ -1,15 +1,14 @@
 <x-layout>
-    <div class="container-fluid mt-5">
-        <div class="row justify-content-center text-center mt-5">
-            <div class="col-12">
-                <h1 class="display-4">
-                    @guest
-                        Presto.it
-                    @else
-                        Benvenuto {{ Auth::user()->name }} su Presto.it!
-                    @endguest
-                </h1>
-                <a href="{{ route('article.create') }}" class="btn btn-primary">Inserisci annuncio</a>
+    <div class="container-fluid">
+        <div class="row justify-content-center text-center">
+            <div class="text-center bg-image header-c">
+                <div class="mask mask-vh text-white text-center d-flex align-items-center justify-content-center flex-column">
+                    <div>
+                        <h1 class="mb-3">Presto.it</h1>
+                        <h4 class="mb-3 fst-italic">"Find everything you need, wherever you are."</h4>
+                        <a data-mdb-ripple-init class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row justify-content-center text-center">
@@ -31,4 +30,5 @@
             @endforeach
         </div>
     </div>
+    
 </x-layout>

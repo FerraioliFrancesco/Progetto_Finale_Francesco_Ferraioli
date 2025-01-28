@@ -34,8 +34,8 @@
     <script src="https://kit.fontawesome.com/bbfbb37e6e.js" crossorigin="anonymous"></script>
     {{-- Swiper --}}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- MDB -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script>
+    {{-- <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.2.0/mdb.umd.min.js"></script> --}}
 </body>
 
 </html>
