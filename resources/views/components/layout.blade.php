@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <x-nav></x-nav>
+    <x-nav/>
 
     <div class="min-vh-100">
         {{ $slot }}

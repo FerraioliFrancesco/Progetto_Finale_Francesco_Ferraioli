@@ -11,3 +11,5 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name('article.byCategory');

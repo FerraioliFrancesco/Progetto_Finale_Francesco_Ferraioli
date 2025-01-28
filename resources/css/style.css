@@ -53,3 +53,19 @@ h6 {
     font-weight: 100;
     
 }
+
+/* carousel swiper */
+
+.swiper {
+    width: 60%;
+    height: 60vh;}
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+}
