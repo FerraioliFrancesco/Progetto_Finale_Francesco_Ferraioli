@@ -34,7 +34,7 @@
                     <p class="card-text">{{ $article->description }}</p>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
                     <p class="card-text"><span class="fst-italic">{{ $article->category->name }}</span></p>
-                    <a href="{{route("article.index")}}" class="btn btn-secondary" data-mdb-ripple-init>Indietro</a>
+                    <a href="{{route("article.index")}}" class="button-card py-2 px-3 rounded-pill" data-mdb-ripple-init>Indietro</a>
                 </div>
             </div>
         </div>

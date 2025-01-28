@@ -4,8 +4,8 @@
     <div class="container">
         <!-- Navbar brand -->
 
-        <a class="navbar-brand me-2" href="https://mdbgo.com/">
-            <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16"
+        <a class="navbar-brand me-2" href="{{route("home")}}">
+            <img src="/img/logo2sm.png" class="logonav"
                 alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
         </a>
 
@@ -23,7 +23,7 @@
                     data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     Categorie
                 </button>
-                <a class="nav-link me-4  fw-bold" href="{{ route('article.index') }}">Tutti gli articoli</a>
+                <a class="nav-link me-4  fw-bold" href="{{ route('article.index') }}">Tutti gli annunci</a>
             </div>
 
             <!-- Right links -->
@@ -42,9 +42,11 @@
                         </button>
                     </a>
                 @else
-                    <div class="nav-item mx-3">
-                        <p>Ciao {{ Auth::user()->name }}</p>
-                        <a class="nav-link" href="{{ route('article.create') }}">Inserisci annuncio</a>
+                    <div class="nav-item me-3 text-center">
+                        <span class="fw-bold">Ciao {{ Auth::user()->name }}!</span>
+                    </div>
+                    <div class="nav-item me-3">
+                        <a class="nav-link fw-bold" href="{{ route('article.create') }}">Inserisci annuncio</a>
                     </div>
                     <form action="{{ route('logout') }}" method="POST">
                         @csrf
@@ -68,10 +70,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul class="">
+        <ul >
             @foreach ($categories as $category)
-                <li><a class="list-unlisted text-capitalize"
-                        href="{{ route('article.byCategory', ['category' => $category]) }}">{{ $category->name }}</a></li>
+                <li><a class=" text-capitalize nav-link fw-bold"
+                        href="{{ route('article.byCategory', ['category' => $category])}}">{{ $category->name }}</a></li>
             @endforeach
         </ul>
     </div>

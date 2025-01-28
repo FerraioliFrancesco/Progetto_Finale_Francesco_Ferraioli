@@ -44,6 +44,11 @@ h6 {
 
 }
 
+/* logo navbar */
+.logonav{
+    height: 50px;
+}
+
 .button-custom {
 
     background-color: var(--terziario);
@@ -89,4 +94,37 @@ h6 {
 
     background-color: rgba(0, 0, 0, 0.5);
     height: 80vh;
+}
+
+/* bottone header  */
+
+.button-header{
+    background-color: var(--principale);
+    border-radius: 30px;
+    border: 1px solid var(--principale);
+    color: black;
+    font-weight: bold;
+}
+
+.button-header:hover{
+    background-color: transparent;
+    border: 3px solid var(--principale);
+    font-weight: bolder;
+    color: var(--principale);
+    transition: 0.4s;
+}
+
+/* bottone card  */
+
+.button-card{
+    background-color: var(--principale);
+    border-radius: 30px;
+    border: 1px solid var(--principale);
+    color: black;
+    font-weight: bold;
+}
+
+.button-card:hover{
+    border: 10px solid var(--principale);
+    transition: 0.4s ease-in-out;
 }
