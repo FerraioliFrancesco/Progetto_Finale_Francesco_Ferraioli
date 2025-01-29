@@ -1,7 +1,12 @@
 <footer class="bg-body-tertiary text-center">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
-        <!-- Section: Social media -->
+        <div class="row justify-content-center">
+            <div class="col-2 navbar-nav">
+                <a href="{{route("become.revisor")}}" class="nav-link fw-bold"> Lavora con noi!</a>
+            </div>
+        </div>
+        {{-- <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Facebook -->
             <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #3b5998;"
@@ -25,7 +30,7 @@
             <!-- Github -->
             <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;"
                 href="#!" role="button"><i class="fab fa-github"></i></a>
-        </section>
+        </section> --}}
         <!-- Section: Social media -->
     </div>
     <!-- Grid container -->

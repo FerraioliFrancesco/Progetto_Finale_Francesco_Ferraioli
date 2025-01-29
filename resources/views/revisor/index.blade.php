@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
                     <div >
-                        <h1>{{$article_to_check->title}}</h1>
+                        <p class="h1 display-1">{{$article_to_check->title}}</p>
                         <h3>Autore: {{$article_to_check->user->name}}</h3>
                         <h4>{{$article_to_check->price}}€</h4>
                         <h4 class="fst-italic text-muted">{{$article_to_check->category->name}}</h4>
@@ -51,8 +51,8 @@
         @else
             <div class="row justify-content-center align-items-center text-center">
                 <div class="col-12">
-                    <h1 class="display-4 fst-italic">Nessun articolo da revisionare</h1>
-                    <a class="mt-5 button-card" href="{{route('home')}}">Torna all'homepage</a>
+                    <p class="h1 display-4 fst-italic">Nessun articolo da revisionare</p>
+                    <a class="mt-5 button-card px-4 py-2 rounded-pill" href="{{route('home')}}">Torna all'homepage</a>
                 </div>
             </div>
         @endif
