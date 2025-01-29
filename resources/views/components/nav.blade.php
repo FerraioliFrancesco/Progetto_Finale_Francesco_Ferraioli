@@ -54,6 +54,13 @@
                             <i class="fa-solid fa-right-from-bracket fa-2x"></i>
                         </button>
                     </form>
+                    @if (Auth::user()->is_revisor)
+                        <div class="nav-item">
+                            <a href="{{ route('revisor.index') }}" class="nav-link fw-bold">Zona revisore</a>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                        </div>
+
+                    @endif
                 @endguest
             </div>
         </div>
