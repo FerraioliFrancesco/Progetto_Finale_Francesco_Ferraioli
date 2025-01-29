@@ -10,8 +10,8 @@
     </div>
     <div class="container-fluid mt-3 mb-5">
         <div class="row justify-content-center ">
-            <div class="col-6">
-                <livewire:create-article-form  />
+            <div class="col-11 col-md-6">
+                <livewire:create-article-form />
             </div>
         </div>
     </div>

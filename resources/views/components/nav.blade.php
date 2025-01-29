@@ -4,9 +4,8 @@
     <div class="container">
         <!-- Navbar brand -->
 
-        <a class="navbar-brand me-2" href="{{route("home")}}">
-            <img src="/img/logo2sm.png" class="logonav"
-                alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
+        <a class="navbar-brand me-2" href="{{ route('home') }}">
+            <img src="/img/logo2sm.png" class="logonav" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
         </a>
 
         <!-- Toggle button -->
@@ -55,11 +54,11 @@
                         </button>
                     </form>
                     @if (Auth::user()->is_revisor)
-                        <div class="nav-item d-flex align-items-center border border-dark rounded p-2">
+                        <div class="nav-item d-flex align-items-center border border-dark rounded p-2 position-relative">
                             <a href="{{ route('revisor.index') }}" class="nav-link fw-bold me-1">Zona revisore</a>
-                            <span class=" badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>
+                            <span
+                                class="badge rounded-pill bg-danger position-absolute top-0 start-100 translate-middle">{{ \App\Models\Article::toBeRevisedCount() }}</span>
                         </div>
-
                     @endif
                 @endguest
             </div>
@@ -77,11 +76,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <ul >
+        <ul>
             @foreach ($categories as $category)
                 <li><a class=" text-capitalize nav-link fw-bold"
-                        href="{{ route('article.byCategory', ['category' => $category])}}">{{ $category->name }}</a></li>
+                        href="{{ route('article.byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+                </li>
             @endforeach
         </ul>
     </div>
-  </div>
+</div>
