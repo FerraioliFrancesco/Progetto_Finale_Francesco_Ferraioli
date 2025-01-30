@@ -27,23 +27,23 @@
                     </div>
                 </div>
                 <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
-                    <div >
-                        <p class="h1 display-1">{{$article_to_check->title}}</p>
+                    <div class="text-center">
+                        <p class="h1 display-1">Titolo: {{$article_to_check->title}}</p>
                         <h3>Autore: {{$article_to_check->user->name}}</h3>
-                        <h4>{{$article_to_check->price}}€</h4>
-                        <h4 class="fst-italic text-muted">{{$article_to_check->category->name}}</h4>
-                        <p class="h6">{{$article_to_check->description}}</p>
+                        <h4>Prezzo: {{$article_to_check->price}}€</h4>
+                        <h4 class="fst-italic text-muted">Categoria: {{$article_to_check->category->name}}</h4>
+                        <p class="h6">Descrizione: <br> {{$article_to_check->description}}</p>
                     </div>
                     <div class="d-flex pb-4 justify-content-around">
                         <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="button-card py-2 px-5 fw-bold">Rifiuta</button>
+                            <button class="btn btn-danger rounded-pill mb-3 fw-bold">Rifiuta</button>
                         </form>
                         <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                             @csrf
                             @method('PATCH')
-                            <button class="button-card py-2 px-5 fw-bold">Accetta</button>
+                            <button class="btn btn-success rounded-pill mb-3 fw-bold">Accetta</button>
                         </form>
                     </div>
                 </div>

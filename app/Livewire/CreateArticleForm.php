@@ -33,7 +33,7 @@ class CreateArticleForm extends Component
         ]);
 
         $this->reset();
-        session()->flash('message', 'Annuncio creato con successo');
+        session()->flash('message', 'Annuncio creato con successo, in attesa di approvazione');
     }
 
     public function render()

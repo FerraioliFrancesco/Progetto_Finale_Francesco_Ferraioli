@@ -6,11 +6,10 @@
             </div>
         </div>
         <div class="row justify-content-center text-center">
-            
-            <div class="col-12 mt-5">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+            <div class="col-12 mt-5 ">
+                <div class="swiper mySwiper rounded-5">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide ">
                             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
                         </div>
                         <div class="swiper-slide">
@@ -29,7 +28,7 @@
                 </div>
             </div>
             
-            <div class="card col-12 col-md-3 my-5">
+            <div class="col-12 col-md-3 my-5">
                 <div class="card-body">
                     <p class="card-text">{{ $article->description }}</p>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>

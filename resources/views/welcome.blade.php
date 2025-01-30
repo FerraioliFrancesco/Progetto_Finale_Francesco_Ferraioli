@@ -25,12 +25,12 @@
         </div>
         <div class="row justify-content-center text-center">
             @foreach ($articles as $article)
-                <div class="card col-12 col-md-3 mt-5">
+                <div class=" col-12 col-md-3 mt-5">
                     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                        <img src="https://picsum.photos/400/400" class="img-fluid" />
-                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                        <img src="https://picsum.photos/400/400" class="img-fluid rounded-5" />
+                        <div class="mask"></div>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body mt-3">
                         <h5 class="card-title">{{ $article->title }}</h5>
                         <p class="card-text">{{ $article->price }}</p>
                         <p class="card-text">{{ $article->category->name }}</p>
