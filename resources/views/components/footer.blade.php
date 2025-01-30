@@ -20,7 +20,7 @@
         </section>
         <!-- Section: Social media -->
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center m-0 p-0">
         <div class="col-8 col-md-2 navbar-nav">
             <a href="{{ route('become.revisor') }}" class="button-card py-2 mb-2"> Diventa revisor </a>
         </div>

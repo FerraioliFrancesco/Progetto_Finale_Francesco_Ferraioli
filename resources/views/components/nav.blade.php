@@ -8,6 +8,13 @@
             <img src="/img/logo2sm.png" class="logonav" alt="MDB Logo" loading="lazy" style="margin-top: -1px;" />
         </a>
 
+        <form action="{{route("article.search")}}" class="d-flex ms-auto" role="search" method="GET">
+            <div class="input-group">
+                <input type="text" class="form-control rounded-start-pill shadow" name="query" placeholder="Ricerca tra gli annunci" aria-label="Search">
+                <button class="btn btn-dark rounded-end-pill" type="submit" id="basic-addon2">Cerca</button>
+            </div>
+        </form>
+
         <!-- Toggle button -->
         <button data-mdb-collapse-init class="navbar-toggler" type="button" data-mdb-target="#my-navbar"
             aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">

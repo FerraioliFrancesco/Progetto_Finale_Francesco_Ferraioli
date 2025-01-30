@@ -19,3 +19,6 @@ Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 ROute::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+
+// Route search 
+Route::get('/search/article',[PublicController::class, 'searchArticle'])->name('article.search');
