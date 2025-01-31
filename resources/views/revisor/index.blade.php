@@ -32,7 +32,7 @@
                     <h3 class=" mb-3">Autore: {{$article_to_check->user->name}}</h3>
                     <h4 class=" mb-3">Prezzo: {{$article_to_check->price}}€</h4>
                     <h4 class="fst-italic text-muted">Categoria: {{$article_to_check->category->name}}</h4>
-                    <p class="h6">Descrizione: <br> {{$article_to_check->description}}</p>
+                    <p class="fw-bold">Descrizione: <br> {{$article_to_check->description}}</p>
                 </div>
 
                     {{--inizio logica modal buttom reject --}}

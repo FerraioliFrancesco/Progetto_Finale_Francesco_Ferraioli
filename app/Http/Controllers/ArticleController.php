@@ -60,13 +60,23 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Article $article)
-    {
-        //
-    }
 
     public function byCategory(Category $category){
         $articles =$category->articles->where('is_accepted', true);
         return view('article.byCategory',compact('articles','category'));
     }
+
+    public function yourArticles(){
+        $articles = Article::all();
+        return view('article.profile-articles',compact('articles'));
+    }   
+
+    public function destroy(Article $article)
+    {
+        $article->user()->disassociate();
+        $article->category()->disassociate();
+        $article->delete();
+        return redirect()->route('profile.articles')->with('message','Il tuo Annuncio è stato eliminato con successo');
+    }
+
 }

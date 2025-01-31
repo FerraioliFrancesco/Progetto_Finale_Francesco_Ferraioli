@@ -12,6 +12,8 @@ Route::get('/create/article', [ArticleController::class, 'create'])->middleware(
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
+ROute::get('/profile/yourArticles',[ArticleController::class,'yourArticles'])->middleware('auth')->name('profile.articles');
+Route::delete('/profile/yourArticles/destroy/{article}',[ArticleController::class,'destroy'])->middleware('auth')->name('article.destroy');
 
 // Route admin and revisor
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');

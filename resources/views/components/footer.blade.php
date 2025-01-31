@@ -1,4 +1,4 @@
-<footer class="bg-terziario text-center">
+<footer class="bg-terziario text-center mt-5">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
         <!-- Section: Social media -->

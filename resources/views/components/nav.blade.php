@@ -117,6 +117,11 @@ aria-labelledby="offcanvasWithBothOptionsLabel">
             <a class="nav-link fw-bold text-capitalize" href="{{ route('article.create') }}">Inserisci annuncio</a>
         </div>
     </li>
+    <li class="my-2">
+        <div class=" me-3 mt-2 mt-md-0">
+            <a class="nav-link fw-bold text-capitalize" href="{{ route('profile.articles') }}">I tuoi annunci</a>
+        </div>
+    </li>
     
     <hr class="dropdown-divider">
 </ul>
