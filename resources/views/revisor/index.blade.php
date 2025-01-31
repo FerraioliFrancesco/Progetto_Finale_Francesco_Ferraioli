@@ -33,6 +33,12 @@
                     <h4 class=" mb-3">Prezzo: {{$article_to_check->price}}€</h4>
                     <h4 class="fst-italic text-muted">Categoria: {{$article_to_check->category->name}}</h4>
                     <p class="fw-bold">Descrizione: <br> {{$article_to_check->description}}</p>
+                    @if ($article_to_check->created_at==$article_to_check->updated_at)
+                        <p class="fw-bold text-muted">Data di pubblicazione: <br> {{$article_to_check->created_at->format('d/m/Y H:i')}}</p>
+                    @else
+                        <p class="fw-bold text-muted">Data di pubblicazione: <br> {{$article_to_check->created_at->format('d/m/Y H:i')}}</p>
+                        <p class="fw-bold text-muted">Data di modifica: <br> {{$article_to_check->updated_at->format('d/m/Y H:i')}}</p>
+                    @endif
                 </div>
 
                     {{--inizio logica modal buttom reject --}}

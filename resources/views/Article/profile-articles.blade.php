@@ -33,10 +33,11 @@
                     <h5 class="card-title">{{ $article->title }}</h5>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
                     <p class="card-text fst-italic">{{ $article->category->name }}</p>
+                    <p class="card-text text-muted"> Modificato il:     {{ $article->updated_at->format('d/m/Y') }}</p>
                     <div class="d-flex align-items-center justify-content-center">
-                        <a href="" class="btn btn-info py-2 px-4 me-2 rounded-pill" data-mdb-ripple-init>Info</a>
+                        <a href="{{route("article.show",compact("article"))}}" class="btn btn-info py-2 px-4 me-2 rounded-pill" data-mdb-ripple-init>Info</a>
                         @if ($article->is_accepted!==null)
-                            <a href="" class="btn btn-warning py-2 px-3 me-2 rounded-pill" data-mdb-ripple-init>Modifica</a>
+                            <a href="{{route('article.edit',compact('article'))}}" class="btn btn-warning py-2 px-3 me-2 rounded-pill" data-mdb-ripple-init>Modifica</a>
                         <form action="{{route("article.destroy",compact("article"))}}" method="POST">
                             @csrf
                             @method('DELETE')

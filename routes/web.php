@@ -14,6 +14,8 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('article.byCategory');
 ROute::get('/profile/yourArticles',[ArticleController::class,'yourArticles'])->middleware('auth')->name('profile.articles');
 Route::delete('/profile/yourArticles/destroy/{article}',[ArticleController::class,'destroy'])->middleware('auth')->name('article.destroy');
+Route::get('/profile/yourArticles/edit/{article}',[ArticleController::class,'edit'])->middleware('auth')->name('article.edit');
+Route::put('/profile/yourArticles/update/{article}',[ArticleController::class,'update'])->middleware('auth')->name('article.update');
 
 // Route admin and revisor
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
