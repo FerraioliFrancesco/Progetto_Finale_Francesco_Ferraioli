@@ -33,7 +33,8 @@
                     <p class="card-text">{{ $article->description }}</p>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
                     <p class="card-text"><span class="fst-italic">{{ $article->category->name }}</span></p>
-                    <a href="{{route("article.index")}}" class="button-card py-2 px-3 rounded-pill" data-mdb-ripple-init>Indietro</a>
+                    <a href="{{route("article.index")}}" class="button-card py-2 px-3 rounded-pill" data-mdb-ripple-init>Tutti gli annunci</a>
+                    <a href="{{route("profile.articles")}}" class="button-card py-2 px-3 rounded-pill" data-mdb-ripple-init>I tuoi annunci</a>
                 </div>
             </div>
         </div>
