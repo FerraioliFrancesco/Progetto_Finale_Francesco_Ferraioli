@@ -107,9 +107,8 @@ h6 {
 /* header */
 .header-c{
 
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-    height: 80vh;
-    background-size: cover;
+    background-image: url('C:\Users\Gallo\Aulab\ProgettoFinaleFullStack\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
+    height: 90vh;
 
 }
 
@@ -190,4 +189,14 @@ h6 {
 } */
 .mask{
     background-color: rgba(251, 251, 251, 0.15);
+}
+
+/* create-article-form images  */
+
+.img-preview{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
 }

@@ -37,6 +37,31 @@
                 @endforeach
             </select>
         </div>
+        <div class="mb-3">
+            <input type="file" wire:model.live="temporary_images" multiple class="form-control rounded-5 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
+        @error('temporary_images.*')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+        @error('temporary_images')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+        </div>
+        @if (!empty($images))
+            <div class="row">
+                <div class="col-12">
+                    <p>Preview dell'immagine</p>
+                    <div class="row border border-4 border-success rounded-5 py-4">
+                        @foreach ($images as $key => $image)
+                            <div class="d-flex flex-column align-items-center my-3">
+                                <div class="img-preview mx-auto rounded-5" wire:key="{{$key}}" style="background-image: url('{{$image->temporaryUrl()}}')">
+                                </div>
+                                <button type="button" class="btn mt-1 btn-danger rounded-pill" wire:click="removeImage({{$key}})">X</button>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="d-flex justify-content-center">
             <button type="submit" class="button-card py-1 px-3 rounded-5">Crea</button>
         </div>

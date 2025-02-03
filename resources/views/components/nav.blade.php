@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  navbar-custom">
+<nav class="navbar navbar-expand-lg  navbar-custom p-0">
     <div class="container-fluid p-0">
         {{-- logo --}}
         <a class="navbar-brand ms-2" href="{{ route('home') }}"> <img src="/img/logo2sm.png" class="logonav m-0"
