@@ -92,7 +92,7 @@ h6 {
 
 .swiper {
     width: 60%;
-    height: 60vh;}
+    height: 70vh;}
 
   .swiper-slide {
     background-position: center;
@@ -102,6 +102,7 @@ h6 {
   .swiper-slide img {
     display: block;
     width: 100%;
+
 }
 
 /* header */

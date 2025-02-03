@@ -38,6 +38,7 @@
             </select>
         </div>
         <div class="mb-3">
+            <label class="form-label">Inserisci immagini prodotto (MAX 6): </label>
             <input type="file" wire:model.live="temporary_images" multiple class="form-control rounded-5 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
         @error('temporary_images.*')
             <div class="alert alert-danger">{{ $message }}</div>
