@@ -56,7 +56,7 @@
                             </select>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="submit" class="button-card py-1 px-3 rounded-5">Modfica</button>
+                            <button type="submit" class="button-card py-1 px-3 rounded-5">Modifica</button>
                         </div>
                     </form>
                 </div>
