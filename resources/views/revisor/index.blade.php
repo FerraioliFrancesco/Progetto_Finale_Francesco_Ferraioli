@@ -20,8 +20,8 @@
             @if ($article_to_check->images->count())
                 @foreach ($article_to_check->images as $key => $image)
                     <div class="col-6 col-md-4 mb-4 text-center">
-                        <img src="{{ Storage::url($image->path) }}"
-                            alt="Immagini {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}}"
+                        <img src="{{ $image->getUrl(1000, 1000) }}"
+                            alt="Immagini {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
                             class="img-fluid rounded shadow">
                     </div>
                 @endforeach
@@ -31,7 +31,7 @@
                         <div class="row justify-content-center">
                             @for ($i = 0; $i < 6; $i++)
                                 <div class="col-6 col-md-4 mb-4 text-center">
-                                    <img src="https://picsum.photos/400/400" alt="Immagini segnaposto"
+                                    <img src="https://picsum.photos/300/300" alt="Immagini segnaposto"
                                         class="img-fluid rounded shadow">
                                 </div>
                             @endfor

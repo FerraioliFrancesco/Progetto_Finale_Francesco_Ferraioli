@@ -96,19 +96,20 @@ h6 {
 
   .swiper-slide {
     background-position: center;
-    background-size: cover;
+    background-size:cover;
   }
 
   .swiper-slide img {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
 
 }
 
 /* header */
 .header-c{
 
-    background-image: url('C:\Users\Gallo\Aulab\ProgettoFinaleFullStack\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
+    background-image: url('C:\Program Files\Git\proggeti-A\Aulab_Final\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
     height: 90vh;
 
 }

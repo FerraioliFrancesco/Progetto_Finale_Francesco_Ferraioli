@@ -15,7 +15,7 @@
             @if (Auth::id()==$article->user_id)
             <div class="col-12 col-md-3 my-5 mx-3">
                 <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                    <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/400/400'}}" alt="Immagini dell'articolo {{$article->title}}" class="img-fluid rounded-5 " />
+                    <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 1000) : 'https://picsum.photos/1000/1000'}} alt="Immagini dell'articolo {{$article->title}}" class="img-fluid rounded-5 " />
                     <a href="{{route("article.show",compact("article"))}}">
                         <div class="mask"></div>
                     </a>

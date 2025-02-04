@@ -13,7 +13,7 @@
                         <div class="swiper-wrapper ">
                             @foreach ($article->images as $key => $image)
                                 <div class="swiper-slide">
-                                    <img src="{{ Storage::url($image->path) }}"
+                                    <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 1000) : 'https://picsum.photos/1000/1000'}}"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                 </div>
                             @endforeach
