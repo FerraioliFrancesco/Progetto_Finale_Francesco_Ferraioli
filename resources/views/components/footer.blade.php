@@ -1,4 +1,4 @@
-<footer class="bg-body-tertiary text-center">
+<footer class="bg-terziario text-center mt-5">
     <!-- Grid container -->
     <div class="container p-4 pb-0">
         <!-- Section: Social media -->
@@ -20,7 +20,7 @@
         </section>
         <!-- Section: Social media -->
     </div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center m-0 p-0">
         <div class="col-8 col-md-2 navbar-nav">
             <a href="{{ route('become.revisor') }}" class="button-card py-2 mb-2"> Diventa revisor </a>
         </div>
@@ -28,7 +28,7 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    <div class="text-center p-3 bg-terziario">
         © 2025 Copyright:
         <a class="text-body" href="https://mdbootstrap.com/">Presto.it</a>
     </div>

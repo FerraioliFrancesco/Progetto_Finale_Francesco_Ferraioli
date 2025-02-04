@@ -46,7 +46,29 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('article.edit', compact('article'));
+    }
+
+    // funzione per searchbar della navbar
+    public function byCategory(Category $category){
+        $articles =$category->articles->where('is_accepted', true);
+        return view('article.byCategory',compact('articles','category'));
+    }
+
+    public function yourArticles(){
+        $articles = Article::orderBY('updated_at','desc')->get();
+        return view('article.profile-articles',compact('articles'));
+    }   
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Article $article)
+    {
+        $article->user()->disassociate();
+        $article->category()->disassociate();
+        $article->delete();
+        return redirect()->route('profile.articles')->with('message','Il tuo Annuncio è stato eliminato con successo');
     }
 
     /**
@@ -54,19 +76,18 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $article->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'price' => $request->price,
+        ]);
+
+        $article->setAccepted(null);
+
+        $article->category()->associate($request->category);
+        $article->save();
+
+        return redirect(route('profile.articles'))->with('message', 'Il tuo annuncio è stato modificato con successo');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Article $article)
-    {
-        //
-    }
-
-    public function byCategory(Category $category){
-        $articles =$category->articles->where('is_accepted', true);
-        return view('article.byCategory',compact('articles','category'));
-    }
 }

@@ -5,6 +5,10 @@
     --terziario: #e9e9e9;
 
 }
+/* bg-footer */
+.bg-terziario{
+    background-color: var(--terziario);
+}
 
 body {
 
@@ -44,7 +48,26 @@ h6 {
 
 }
 
+
+
+
+
+/* off-canvs destro */
+
+.position-custom {
+
+    left: 35%;
+    top: 20%;
+
+}
+
 /* logo navbar */
+.ul-profile{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
 .logonav{
     height: 50px;
 }
@@ -69,24 +92,25 @@ h6 {
 
 .swiper {
     width: 60%;
-    height: 60vh;}
+    height: 70vh;}
 
   .swiper-slide {
     background-position: center;
-    background-size: cover;
+    background-size:cover;
   }
 
   .swiper-slide img {
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+
 }
 
 /* header */
 .header-c{
 
-    background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
-    height: 80vh;
-    background-size: cover;
+    background-image: url('C:\Users\franc\wa\self-work\ProgettoFinale\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
+    height: 90vh;
 
 }
 
@@ -144,4 +168,37 @@ h6 {
 .form-custom{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 25px;
+}
+ .nav-phone{
+    flex-direction: row;
+ }
+
+/* media query */
+
+@media screen and (max-width: 767px) {
+    .nav-phone{
+        flex-direction: column;
+    }
+
+    .logonav{
+        height: 25px;
+    }
+}
+
+/* article costum */
+/* .shadow-custom{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+} */
+.mask{
+    background-color: rgba(251, 251, 251, 0.15);
+}
+
+/* create-article-form images  */
+
+.img-preview{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 120px;
 }
