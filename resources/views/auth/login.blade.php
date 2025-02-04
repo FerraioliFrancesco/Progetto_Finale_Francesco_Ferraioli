@@ -6,7 +6,7 @@
 
             <div class="col-12 d-flex justify-content-center">
 
-                <h1 class="display-4 text-center">Accedi</h1>
+                <h1 class="display-4 text-center">{{__('ui.login')}}</h1>
 
             </div>
 
@@ -17,7 +17,7 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label class="form-label">Indirizzo email: </label>
+                        <label class="form-label">{{__('ui.email')}} </label>
                         <input type="email" class="form-control" name="email">
                     </div>
                     <div class="mb-3">
@@ -25,7 +25,7 @@
                         <input type="password" class="form-control" name="password">
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="button-card py-2 px-3 rounded-5">Accedi</button>
+                        <button type="submit" class="button-card py-2 px-3 rounded-5">{{__('ui.login')}}</button>
                     </div>
                 </form>
 

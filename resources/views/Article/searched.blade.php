@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-1">Risultati della ricerca "<span class="fst-italic">{{$query}}</span>"</h1>
+                <h1 class="display-1">{{__('ui.searchResults')}} "<span class="fst-italic">{{$query}}</span>"</h1>
             </div>
         </div>
         <div class="row justify-content-center align-items-center py-5">
@@ -24,7 +24,7 @@
             </div>
             @empty
             <div class="col-12">
-                <h3 class="text-center">Nessun articolo corrisponde alla tua ricerca</h3>
+                <h3 class="text-center">{{__('ui.noneResult')}}</h3>
             </div>
             @endforelse
         </div>

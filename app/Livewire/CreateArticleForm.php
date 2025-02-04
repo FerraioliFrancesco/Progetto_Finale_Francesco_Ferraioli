@@ -16,10 +16,10 @@ class CreateArticleForm extends Component
     use WithFileUploads;
     
     #[Validate('required', message: "Titolo obbligatorio")]
-    #[Validate('min:5', message: "minimo 5 caratteri")]
+    #[Validate('min:5', message: "Minimo 5 caratteri")]
     public $title;
-    #[Validate('required', message: "Descrizione obbligatorio")]
-    #[Validate('min:10', message: "minimo 10 caratteri")]
+    #[Validate('required', message: "Descrizione obbligatoria")]
+    #[Validate('min:10', message: "Minimo 10 caratteri")]
     public $description;
     #[Validate('required', message: "Prezzo obbligatorio")]
     public $price;
@@ -47,7 +47,7 @@ class CreateArticleForm extends Component
                 $newImage = $this->article->images()->create([
                     'path' => $image->store($newFileName, 'public')
                 ]);
-                dispatch(new ResizeImage($newImage->path , 1000, 1000));
+                dispatch(new ResizeImage($newImage->path , 300, 300));
             }
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }

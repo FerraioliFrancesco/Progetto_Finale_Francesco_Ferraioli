@@ -2,12 +2,12 @@
     <div class="container-fluid mt-5">
         <div class="row justify-content-center align-items-center text-center">
             <div class="col-12">
-                <h1 class="display-1">Tutti gli Articoli</h1>
+                <h1 class="display-1">{{__('ui.allAds')}}</h1>
             </div>
         </div>
         <div class="row justify-content-center text-center">
             @foreach ($articles as $article)
-                <div class="col-12 col-md-2 my-5 mx-3">
+                <div class="col-12 col-md-2 my-5 mx-3 card-custom">
                     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
                         <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 1000) : 'https://picsum.photos/1000/1000'}}" alt="Immagini dell'articolo {{$article->title}}" class="img-fluid rounded-5 " />
                         <a href="{{route("article.show",compact("article"))}}">

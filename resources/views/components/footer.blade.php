@@ -17,16 +17,27 @@
             <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333;"
                 href="https://github.com/hackademy-157/presto_ferraioli_lozano_macri_gallo_araujo/commits/main/"
                 target="blank" role="button"><i class="fab fa-github"></i></a>
+
+
         </section>
         <!-- Section: Social media -->
     </div>
+    @if (Auth::user()->is_revisor == 0)
     <div class="row justify-content-center m-0 p-0">
         <div class="col-8 col-md-2 navbar-nav">
-            <a href="{{ route('become.revisor') }}" class="button-card py-2 mb-2"> Diventa revisor </a>
+            <a href="{{ route('become.revisor') }}" class="button-card py-2 mb-2"> {{__('ui.becomeRevisor')}} </a>
         </div>
     </div>
+    @endif
     <!-- Grid container -->
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <x-_locale lang="it" />
+            <x-_locale lang="en" />
+            <x-_locale lang="es" />
+        </div>
 
+    </div>
     <!-- Copyright -->
     <div class="text-center p-3 bg-terziario">
         © 2025 Copyright:

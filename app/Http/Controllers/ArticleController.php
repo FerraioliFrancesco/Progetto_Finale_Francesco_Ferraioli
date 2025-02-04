@@ -68,7 +68,7 @@ class ArticleController extends Controller
         $article->user()->disassociate();
         $article->category()->disassociate();
         $article->delete();
-        return redirect()->route('profile.articles')->with('message','Il tuo Annuncio è stato eliminato con successo');
+        return redirect()->route('profile.articles')->with('message', __('ui.deleteMessage'));
     }
 
     /**
@@ -87,7 +87,7 @@ class ArticleController extends Controller
         $article->category()->associate($request->category);
         $article->save();
 
-        return redirect(route('profile.articles'))->with('message', 'Il tuo annuncio è stato modificato con successo');
+        return redirect(route('profile.articles'))->with('message', __('ui.editMessage'));
     }
 
 }
