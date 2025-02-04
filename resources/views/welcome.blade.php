@@ -40,4 +40,5 @@
                 </div>
             @endforeach
         </div>
+    </div>
 </x-layout>

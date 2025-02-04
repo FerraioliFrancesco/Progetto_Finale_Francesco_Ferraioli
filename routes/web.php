@@ -26,3 +26,6 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 
 // Route search 
 Route::get('/search/article',[PublicController::class, 'searchArticle'])->name('article.search');
+
+// Rotte cambio lingua
+Route::post('/lingua/{lang}' , [PublicController::class, 'setLanguage'])->name('setLocale');
