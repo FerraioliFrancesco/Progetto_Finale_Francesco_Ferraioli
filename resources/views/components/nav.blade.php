@@ -20,9 +20,9 @@
                     <button class="nav-link fw-bold text-center" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Categorie</button>
                 </li>
-                <x-locale lang="it"/>
-                <x-locale lang="en"/>
-                <x-locale lang="es"/>
+                <x-_locale lang="it"/>
+                <x-_locale lang="en"/>
+                <x-_locale lang="es"/>
             </ul>
 
             <ul class="navbar-nav me-md-3 me-sm-0 mb-2 mb-lg-0 mt-3 mt-md-0 ul-profile ">
