@@ -13,12 +13,12 @@
                         <div class="swiper-wrapper ">
                             @foreach ($article->images as $key => $image)
                                 <div class="swiper-slide">
-                                    <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300/300'}}"
+                                    <img src="{{Storage::url($image->path)}}"
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                 </div>
                             @endforeach
                     
-                            @if ($article->images->count() > 1)
+                          
                                 <div>
 
                                     <div class="swiper-button-next"></div>
@@ -26,13 +26,13 @@
                                     <div class="swiper-pagination"></div>
 
                                 </div>
-                            @endif
+                            
                         </div>
 
 
                     </div>
                 @else
-                    <img src="https://picsum.photos/400/400" alt="Nessuna foto inserita dall'utente">
+                    <img src="https://picsum.photos/300/300" alt="Nessuna foto inserita dall'utente">
 
                 @endif
 
@@ -43,10 +43,13 @@
                     <p class="card-text">{{ $article->description }}</p>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
                     <p class="card-text"><span class="fst-italic">{{ $article->category->name }}</span></p>
-                    <a href="{{ route('article.index') }}" class="button-card py-2 px-3 me-3 rounded-pill"
-                        data-mdb-ripple-init>{{__('ui.allArticles')}}</a>
-                    <a href="{{ route('profile.articles') }}" class="button-card py-2 px-3 rounded-pill"
-                        data-mdb-ripple-init>{{__('ui.yourAds')}}</a>
+                    <div class="d-flex justify-content-center flex-wrap">
+
+                        <a href="{{ route('article.index') }}" class="button-card py-2 px-3 me-3 rounded-pill"
+                            data-mdb-ripple-init>{{__('ui.allArticles')}}</a>
+                        <a href="{{ route('profile.articles') }}" class="button-card py-2 px-3 mt-0 mt-md-2 mt-lg-0 rounded-pill"
+                            data-mdb-ripple-init>{{__('ui.yourAds')}}</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,5 @@
 var swiper = new Swiper(".mySwiper", {
+  
     spaceBetween: 30,
     effect: "fade",
     navigation: {
@@ -8,6 +9,7 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
+      
     },
 });
 
