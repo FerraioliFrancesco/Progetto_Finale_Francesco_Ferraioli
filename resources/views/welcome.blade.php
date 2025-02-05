@@ -27,7 +27,7 @@
             @foreach ($articles as $article)
                 <div class=" col-12 col-md-3 mt-5 card-custom">
                     <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                        <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(1000, 1000) : 'https://picsum.photos/1000/1000' }}"
+                        <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300/300' }}"
                             alt="Immagini dell'articolo {{ $article->title }}" class="img-fluid rounded-5 " />
                         <div class="mask"></div>
                     </div>

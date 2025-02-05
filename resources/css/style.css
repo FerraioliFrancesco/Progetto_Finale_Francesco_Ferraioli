@@ -109,7 +109,10 @@ h6 {
 /* header */
 .header-c{
 
+    /* background-image: url('C:\Users\Marco\wa157\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
     background-image: url('C:\Users\Marco\wa157\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
+    background-image: url('C:\Users\Marco\wa157\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg'); */
+    background-image: url('C:\Users\Gallo\Aulab\ProgettoFinaleFullStack\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
     height: 90vh;
 
 }
