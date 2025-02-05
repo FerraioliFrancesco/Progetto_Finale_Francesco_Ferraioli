@@ -22,6 +22,7 @@
         </section>
         <!-- Section: Social media -->
     </div>
+    @auth
     @if (Auth::user()->is_revisor == 0)
     <div class="row justify-content-center m-0 p-0">
         <div class="col-8 col-md-2 navbar-nav">
@@ -29,6 +30,7 @@
         </div>
     </div>
     @endif
+    @endauth
     <!-- Grid container -->
     <div class="row p-0 m-0">
         <div class="col-12 d-flex justify-content-center">
