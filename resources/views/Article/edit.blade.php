@@ -51,7 +51,7 @@
                                     <option value="{{ $category->id }}"
                                         @if ($category->id == $article->category_id)
                                             selected
-                                        @endif>{{ $category->name }}</option>
+                                        @endif>{{__("ui.".$article->category->name)  }}</option>
                                 @endforeach
                             </select>
                         </div>

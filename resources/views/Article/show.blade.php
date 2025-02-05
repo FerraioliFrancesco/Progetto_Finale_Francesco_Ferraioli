@@ -42,7 +42,7 @@
                 <div class="card-body">
                     <p class="card-text">{{ $article->description }}</p>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
-                    <p class="card-text"><span class="fst-italic">{{ $article->category->name }}</span></p>
+                    <p class="card-text"><span class="fst-italic">{{__("ui.".$article->category->name)  }}</span></p>
                     <div class="d-flex justify-content-center flex-wrap">
 
                         <a href="{{ route('article.index') }}" class="button-card py-2 px-3 me-3 rounded-pill"

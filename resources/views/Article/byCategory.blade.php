@@ -17,7 +17,7 @@
                 <div class="card-body mt-3">
                     <h5 class="card-title">{{ $article->title }}</h5>
                     <p class="card-text fst-italic mt-1">{{__('ui.price')}} {{ $article->price }} €</p>
-                    <p class="card-text fst-italic">{{__('ui.category')}} <br> {{ $article->category->name }}</p>
+                    <p class="card-text fst-italic">{{__('ui.category')}} <br> {{__("ui.".$article->category->name)  }}</p>
                     <a href="{{route("article.show",compact("article"))}}" class="button-card py-2 px-3" data-mdb-ripple-init>Info</a>
                 </div>
             </div>

@@ -34,7 +34,7 @@
                     <div class="card-body mt-3">
                         <h5 class="card-title">{{ $article->title }}</h5>
                         <p class="card-text">{{ $article->price }}</p>
-                        <p class="card-text">{{ $article->category->name }}</p>
+                        <p class="card-text">{{__("ui.".$article->category->name)  }}</p>
                         <a href="{{ route('article.show', compact('article')) }}"
                             class="button-card py-2 px-3 rounded-pill" data-mdb-ripple-init>Info</a>
                     </div>

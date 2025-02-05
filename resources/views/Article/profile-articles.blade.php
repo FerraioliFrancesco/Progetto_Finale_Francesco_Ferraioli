@@ -32,7 +32,7 @@
                 <div class="card-body mt-3">
                     <h5 class="card-title">{{ $article->title }}</h5>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
-                    <p class="card-text fst-italic">{{ $article->category->name }}</p>
+                    <p class="card-text fst-italic">{{__("ui.".$article->category->name)  }}</p>
                     <p class="card-text text-muted"> {{__('ui.modifiedOn')}}     {{ $article->updated_at->format('d/m/Y') }}</p>
                     <div class="d-flex align-items-center justify-content-center">
                         <a href="{{route("article.show",compact("article"))}}" class="btn btn-info py-2 px-4 me-2 rounded-pill" data-mdb-ripple-init>Info</a>
