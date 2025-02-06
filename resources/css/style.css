@@ -56,12 +56,15 @@ h6 {
 .margin-searchbar{
     transition: all 0.5s;
     position: sticky;
-    
     z-index: 99;
 }
 
+.margin-init{
+    margin-top: 60px;
+}
+
 .searchbar-in{
-    top: 0px;
+    top: 60px;
 }
 
 .searchbar-out{

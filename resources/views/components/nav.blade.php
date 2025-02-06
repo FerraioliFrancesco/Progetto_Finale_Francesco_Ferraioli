@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  navbar-custom p-0" >
+<nav class="navbar navbar-expand-lg fixed-top navbar-custom p-0" >
     <div class="container-fluid p-0">
         {{-- logo --}}
         <a class="navbar-brand ms-2" href="{{ route('home') }}"> <img src="/img/logo2sm.png" class="logonav m-0"
@@ -56,7 +56,7 @@
     
 </nav>
 
-<div class="container-fluid navbar-custom margin-searchbar" id="searchbar" >
+<div class="container-fluid navbar-custom margin-searchbar" id="searchbar" style="margin-top: 60px" >
     <div class="row justify-content-center">
         <div class="col-10 ">
             <form action="{{ route('article.search') }}" class="d-flex mx-auto py-2" role="search" method="GET">

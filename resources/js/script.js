@@ -30,7 +30,7 @@ let currentScrollPos = window.scrollY;
     
   // }else
    if(prevScrollpos > currentScrollPos) {
-    searchbar.classList.remove('searchbar-out',);
+    searchbar.classList.remove('searchbar-out', 'margin-init');
     searchbar.classList.add('searchbar-in',);
   }
   else {
