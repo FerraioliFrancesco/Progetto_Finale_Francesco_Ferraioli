@@ -17,8 +17,6 @@
                                         alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
                                 </div>
                             @endforeach
-                    
-                          
                                 <div>
 
                                     <div class="swiper-button-next"></div>
@@ -38,16 +36,15 @@
 
             </div>
 
-            <div class="col-12 col-md-3 my-5">
+            <div class="col-12 col-md-5 my-5">
                 <div class="card-body">
                     <p class="card-text">{{ $article->description }}</p>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
                     <p class="card-text"><span class="fst-italic">{{__("ui.".$article->category->name)  }}</span></p>
                     <div class="d-flex justify-content-center flex-wrap">
-
                         <a href="{{ route('article.index') }}" class="button-card py-2 px-3 me-3 rounded-pill"
                             data-mdb-ripple-init>{{__('ui.allArticles')}}</a>
-                        <a href="{{ route('profile.articles') }}" class="button-card py-2 px-3 mt-0 mt-md-2 mt-lg-0 rounded-pill"
+                        <a href="{{ route('profile.articles') }}" class="button-card py-2 px-3 rounded-pill"
                             data-mdb-ripple-init>{{__('ui.yourAds')}}</a>
                     </div>
                 </div>

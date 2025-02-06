@@ -24,6 +24,14 @@ return [
     'publish' => 'Si confirmas, el anuncio será publicado y será visible a todos los usuarios.',
     'noneAd' => 'No hay anuncios para revisar',
     'returnHome' => 'Volver a la página de inicio',
+    'labels' => 'Etiquetas',
+    'nolabels' => 'Ninguna Etiqueta',
+    'ratings' => 'Clasificaciones',
+    'adult' => 'Adulto',
+    'violence' => 'Violencia',
+    'spoof' => 'Falsificacion',
+    'racy' => 'Contenido sexualmente explicito',
+    'medical' => 'Sangre, heridas, operaciones quirurgicas',
 
     //Components
     'becomeRevisor' => 'Conviértete en revisor',

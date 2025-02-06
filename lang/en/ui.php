@@ -24,6 +24,14 @@ return [
     'publish' => 'If you confirm, the ad will be published and will be visible to all users.',
     'noneAd' => 'No ads to review',
     'returnHome' => 'Return to homepage',
+    'labels' => 'Labels',
+    'nolabels' => 'No labels',
+    'ratings' => 'Ratings',
+    'adult' => 'Adult',
+    'violence' => 'Violence',
+    'spoof' => 'Spoof',
+    'racy' => 'Racy',
+    'medical' => 'Medical',
 
 
     //Components

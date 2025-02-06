@@ -24,6 +24,14 @@ return [
     'publish' => 'Se confermi, l\'annuncio verrà pubblicato e sarà visibile a tutti gli utenti.',
     'noneAd' => 'Nessun annuncio da revisionare',
     'returnHome' => 'Torna all\'homepage',
+    'labels' => 'Etichette',
+    'nolabels' => 'Nessuna etichetta',
+    'ratings' => 'Valutazioni',
+    'adult' => 'Adulti',
+    'violence' => 'Violenza',
+    'spoof' => 'Falsificazione',
+    'racy' => 'Contenuto sessualmente esplicito',
+    'medical' => 'Sangue, ferite, operazioni chirurgiche',
 
     //Components
     'becomeRevisor' => 'Diventa revisor',
