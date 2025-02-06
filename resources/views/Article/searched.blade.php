@@ -15,7 +15,7 @@
                         <div class="mask"></div>
                     </a>
                 </div>
-                <div class="card-body mt-3">
+                <div class="card-body mt-3 text-center">
                     <h5 class="card-title">{{ $article->title }}</h5>
                     <p class="card-text fst-italic">{{ $article->price }} €</p>
                     <p class="card-text fst-italic">{{__("ui.".$article->category->name)  }}</p>

@@ -24,7 +24,7 @@
 <body>
     <x-nav/>
 
-    <div class="min-vh-100">
+    <div class="vh-custom">
         {{ $slot }}
     </div>
 

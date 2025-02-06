@@ -33,7 +33,7 @@
     @endauth
     <!-- Grid container -->
     <div class="row p-0 m-0">
-        <div class="col-12 d-flex justify-content-center">
+        <div class="col-12 d-flex justify-content-center mt-3">
             <x-_locale lang="it" />
             <x-_locale lang="en" />
             <x-_locale lang="es" />
