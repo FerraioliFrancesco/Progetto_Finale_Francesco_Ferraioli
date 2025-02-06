@@ -17,3 +17,26 @@ var swiper = new Swiper(".mySwiper", {
 import { Collapse, Ripple, initMDB } from "mdb-ui-kit";
 
 initMDB({ Collapse, Ripple });
+
+
+let searchbar = document.querySelector('#searchbar');
+// scroll searchbar
+let prevScrollpos = window.scrollY;
+window.addEventListener("scroll", ()=> {
+let currentScrollPos = window.scrollY;
+  // if(currentScrollPos == 0){
+  //   searchbar.style.top='60px';
+  //   console.log('0');
+    
+  // }else
+   if(prevScrollpos > currentScrollPos) {
+    searchbar.classList.remove('searchbar-out',);
+    searchbar.classList.add('searchbar-in',);
+  }
+  else {
+    searchbar.classList.add('searchbar-out',);
+    searchbar.classList.remove('searchbar-in',);
+    
+  }
+  prevScrollpos = currentScrollPos;
+})

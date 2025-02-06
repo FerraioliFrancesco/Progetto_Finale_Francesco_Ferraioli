@@ -10,7 +10,7 @@
             @forelse ($articles as $article)
             <div class="col-12 col-md-2 mt-5">
                 <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                    <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300/300'}}" class="img-fluid rounded-5" />
+                    <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : '/img/noFoto.jpg'}}" class="img-fluid rounded-5" />
                     <a href="{{route("article.show",compact("article"))}}">
                         <div class="mask"></div>
                     </a>

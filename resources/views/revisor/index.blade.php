@@ -83,7 +83,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-8 d-flex flex-wrap ">
                         <div class="col-6 col-md-12 mb-4 text-center mx-auto p-2">
-                            <img src="https://picsum.photos/300/300" alt="Immagini segnaposto"
+                            <img src="/img/noFoto.jpg" alt="Immagini segnaposto"
                                 class="img-fluid rounded shadow">
                         </div>
                     </div>

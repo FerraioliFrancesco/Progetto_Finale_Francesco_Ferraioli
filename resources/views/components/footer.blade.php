@@ -1,6 +1,6 @@
-<footer class="bg-terziario text-center mt-5">
+<footer class="bg-terziario text-center mt-5 px-0 mx-0">
     <!-- Grid container -->
-    <div class="container p-4 pb-0">
+    <div class="container-fluid py-4 pb-0 mx-0">
         <!-- Section: Social media -->
         <section class="mb-4">
             <!-- Aulab -->
