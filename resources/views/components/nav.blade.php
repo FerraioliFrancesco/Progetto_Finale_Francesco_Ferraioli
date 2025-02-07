@@ -56,7 +56,7 @@
     
 </nav>
 
-<div class="container-fluid navbar-custom margin-searchbar" id="searchbar" style="margin-top: 60px" >
+<div class="container-fluid navbar-custom margin-searchbar margin-init" id="searchbar" >
     <div class="row justify-content-center">
         <div class="col-10 ">
             <form action="{{ route('article.search') }}" class="d-flex mx-auto py-2" role="search" method="GET">
@@ -111,17 +111,17 @@
                         <div class="nav-item d-flex align-items-center  position-relative">
                             <a href="{{ route('revisor.index') }}" class="nav-link fw-bold me-1 text-capitalize ">{{__('ui.revisorZone')}}</a>
                             <span class="badge rounded-pill bg-danger position-absolute position-custom translate-middle">
-                                {{ \App\Models\Article::toBeRevisedCount() }}
+                                {{ \App\Models\Article::toBeRevisedCount()}}
                             </span>
+                        </div>
+                    </li>
+                    <li class="my-2">
+                        <div class="me-3 mt-2 mt-md-0">
+                             <a href="{{route('revisor.table')}}" class="nav-link fw-bold text-capitalize">{{ __('ui.tableRevisor') }}</a>
                         </div>
                     </li>
                 @endif
             @endauth
-            <li class="my-2">
-                <div class="me-3 mt-2 mt-md-0">
-                     <a href="{{route('revisor.table')}}" class="nav-link fw-bold text-capitalize">{{ __('ui.tableRevisor') }}</a>
-                </div>
-            </li>
             <li class="my-2">
                 <div class=" me-3 mt-2 mt-md-0">
                     <a class="nav-link fw-bold text-capitalize" href="{{ route('article.create') }}">{{__('ui.addArticle')}}</a>

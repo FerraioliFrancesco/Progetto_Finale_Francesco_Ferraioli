@@ -10,7 +10,7 @@
             <input type="text" class="form-control rounded-5 @error('title') is-invalid @enderror" id="title"
                 wire:model.blur='title'>
             @error('title')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{ __("ui.errorTitlemessage") }}</div>
             @enderror
         </div>
         <div class="mb-3">
@@ -18,7 +18,7 @@
             <textarea id="description" cols="20" rows="5"
                 class="form-control rounded-5 @error('description') is-invalid @enderror" wire:model.blur='description'></textarea>
             @error('description')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{ __("ui.errorDescriptionmessage") }}</div>
             @enderror
         </div>
         <div class="mb-3">
@@ -26,7 +26,7 @@
             <input type="number" class="form-control rounded-5 @error('price') is-invalid @enderror" id="price"
                 wire:model.blur='price'>
             @error('price')
-                <div class="alert alert-danger">{{ $message }}</div>
+                <div class="alert alert-danger">{{ __("ui.errorPricemessage") }}</div>
             @enderror
         </div>
         <div class="mb-3">
@@ -41,10 +41,10 @@
             <label class="form-label">{{__('ui.imageLivewire')}} </label>
             <input type="file" wire:model.live="temporary_images" multiple class="form-control rounded-5 @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
         @error('temporary_images.*')
-            <div class="alert alert-danger">{{ $message }}</div>
+            <div class="alert alert-danger">{{ __("ui.errorImagesValidatemessage") }}</div>
         @enderror
         @error('temporary_images')
-            <div class="alert alert-danger">{{ $message }}</div>
+            <div class="alert alert-danger">{{ __("ui.errorImagesSizemessage") }}</div>
         @enderror
         </div>
         @if (!empty($images))
@@ -63,7 +63,8 @@
                 </div>
             </div>
         @endif
-        <div class="d-flex justify-content-center">
+        <div class="d-flex flex-column align-items-center">
+            <p class="mb-3 fw-bold">{{__('ui.createMessageLivewire')}}</p>
             <button type="submit" class="button-card py-1 px-3 rounded-5">{{__('ui.createLivewire')}}</button>
         </div>
     </form>

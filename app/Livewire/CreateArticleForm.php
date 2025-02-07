@@ -19,11 +19,9 @@ class CreateArticleForm extends Component
     
     use WithFileUploads;
     
-    #[Validate('required', message: "Titolo obbligatorio")]
-    #[Validate('min:5', message: "Minimo 5 caratteri")]
+    #[Validate('required|min:5', message: "")]
     public $title;
-    #[Validate('required', message: "Descrizione obbligatoria")]
-    #[Validate('min:10', message: "Minimo 10 caratteri")]
+    #[Validate('required|min:10', message: "Descrizione obbligatoria")]
     public $description;
     #[Validate('required', message: "Prezzo obbligatorio")]
     public $price;
@@ -61,7 +59,7 @@ class CreateArticleForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
         
-        session()->flash('message', 'Annuncio creato con successo, in attesa di approvazione');
+        session()->flash('message', __("ui.adSend"));
         $this->reset();
     }
     

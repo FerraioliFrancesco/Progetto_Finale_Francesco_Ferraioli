@@ -22,6 +22,18 @@ class RevisorController extends Controller
         return view('revisor.queue',compact('articles'));
     }
 
+    public function show(Article $article){
+        return view('revisor.show',compact('article'));
+    }
+
+    public function destroy(Article $article)
+    {
+        $article->user()->disassociate();
+        $article->category()->disassociate();
+        $article->delete();
+        return redirect(route('revisor.table'))->with('message', __('ui.deleteRevisorMessage'));
+    }
+
     public function accept(Article $article){
         $article->setAccepted(true);
         return redirect()->back()->with('messageAccepted', __('ui.article')." " . $article->title . " ".__('ui.accepted'));

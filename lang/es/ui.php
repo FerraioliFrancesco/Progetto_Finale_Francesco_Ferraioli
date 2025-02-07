@@ -38,6 +38,11 @@ return [
     'tableRevisorStatus'=>'Estado',
     'tableRevisorCategory'=>'Categoría',
     'adAuthor' => 'Autor del anuncio',
+    'deleteRevisorMessage' => 'Anuncio eliminado con exito',
+    'tableRevisorEmpty'=>'No hay anuncios en la plataforma',
+    'authorREvisorShow'=>'Autor: ',
+    'emailRevisorShow'=>'Email del autor: ',
+
 
 
     //Components
@@ -52,6 +57,7 @@ return [
     'addArticle' => 'Insertar anuncio',
     'yourAd' => 'Tus anuncios',
     'placeholderSearch' => 'Buscar entre los anuncios',
+    'authInfo'=>'Los usuarios registrados pueden insertar anuncios, tener acceso a una página exclusiva de sus anuncios y pueden solicitar ser revisores',
 
     //Auth
     'registration' => 'Registro',
@@ -59,6 +65,9 @@ return [
     'confirm' => 'Confirmar',
     'register' => 'Registrarse',
     'login' => 'Iniciar sesión',
+    'registerHere'=>'Registrarse aqui',
+    'dontHaveAccount'=>'¿No tienes una cuenta?',
+    'haveAccount'=>'¿Ya tienes una cuenta?',
 
     //Categorías
     'Elettronica' => 'Electrónica',
@@ -75,17 +84,23 @@ return [
     //Livewire
     'titleLivewire' => 'Título: ',
     'imageLivewire' => 'Insertar imágenes del producto (MÁX 6): ',
-    'previewLivewire' => 'Vista previa de imágenes: ',
+    'previewLivewire' => 'Vista previa de imágenes (espera a que las imágenes se carguen antes de pulsar el botón): ',
     'createLivewire' => 'Crear',
+    'createMessageLivewire'=>'Antes de pulsar el botón "crear", asegúrate de haber introducido todas las informaciones correctamente. Las imágenes no serán modificables en el futuro',
+    'errorTitlemessage'=>'Titulo obligatorio con almeno 5 caratteri',
+    'errorDescriptionemessage'=>'Descripcion obligatoria con almeno 10 caratteri',
+    'errorPricemessage'=>'Precio obligatorio',
+    'errorImagesValidatemessage'=>'Las imágenes no son validas',
+    'errorImagesSizemessage'=>'Las imágenes deben tener un maximo de 2MB',
 
     //Article
     'allAds' => 'Todos los anuncios',
     'yourAds' => 'Tus anuncios',
     'headerbyCategory' => 'Artículos en la categoría: ',
-    'headerCreate' => 'Crear un nuevo artículo',
+    'headerCreate' => 'Crear un nuevo anuncios',
     'headerEdit' => 'Editar artículo: ',
-    'allArticles' => 'Todos los artículos',
-    'yourArticles' => 'Tus artículos',
+    'allArticles' => 'Todos los anuncios',
+    'yourArticles' => 'Tus anuncios',
     'inReview' => 'En revisión',
     'published' => 'Publicado',
     'refused' => 'Rechazado',
@@ -93,7 +108,8 @@ return [
     'edit' => 'Editar',
     'delete' => 'Eliminar',
     'searchResults' => 'Resultados de búsqueda',
-    'noneResult' => 'Ningún artículo coincide con tu búsqueda',
+    'noneResult' => 'Ningún articulo coincide con tu búsqueda',
+    'sellerEmail'=>'Email del vendedor: ',
 
     //Errori
     'editMessage' => 'Tu anuncio se ha modificado con exito',
@@ -107,5 +123,5 @@ return [
     'descriptionRequired' => 'Description requerido',
     'descriptionMin' => 'Minimo 10 caracteres',
     'priceRequired' => 'Precio requerido',
-    'articleSend' => 'articulo creado con exito, esperando aprobacion',
+    'adSend' => 'Articulo creado con exito, esperando aprobacion',
 ];

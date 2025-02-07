@@ -38,6 +38,10 @@ return [
     'tableRevisorStatus'=>'Status',
     'tableRevisorCategory'=>'Category',
     'adAuthor' => 'Author',
+    'deleteRevisorMessage' => 'Ad deleted successfully',
+    'tableRevisorEmpty'=>'There are no ads on the platform',
+    'authorREvisorShow'=>'Author: ',
+    'emailRevisorShow'=>'Email author: ',
 
 
 
@@ -60,6 +64,10 @@ return [
     'confirm' => 'Confirm',
     'register' => 'Register',
     'login' => 'Login',
+    'registerHere'=>'Register here',
+    'dontHaveAccount'=>'Don\'t have an account?',
+    'haveAccount'=>'Already have an account?',
+    'authInfo'=>'Registered users can insert ads, have access to a private page with their ads and can request to become revisors',
 
     //Categories
     'Elettronica' => 'Electronics',
@@ -76,17 +84,23 @@ return [
     //Livewire
     'titleLivewire' => 'Title: ',
     'imageLivewire' => 'Insert product images (MAX 6): ',
-    'previewLivewire' => 'Image preview: ',
+    'previewLivewire' => 'Image preview (wait for the images to be uploaded before pressing the button): ',
     'createLivewire' => 'Create',
+    'createMessageLivewire'=>'Before pressing the "create" button, make sure you have entered all the information correctly. The images will not be modifiable in the future',
+    'errorTitlemessage'=>'Title required with at least 5 characters',
+    'errorDescriptionemessage'=>'Description required with at least 10 characters',
+    'errorPricemessage'=>'Price required',
+    'errorImagesValidatemessage'=>'Invalid images',
+    'errorImagesSizemessage'=>'Images must have a maximum of 2MB',
 
     //Article
     'allAds' => 'All ads',
     'yourAds' => 'Your ads',
     'headerbyCategory' => 'Articles in category: ',
-    'headerCreate' => 'Create a new article',
-    'headerEdit' => 'Edit article: ',
-    'allArticles' => 'All articles',
-    'yourArticles' => 'Your articles',
+    'headerCreate' => 'Create a new ad',
+    'headerEdit' => 'Edit ad: ',
+    'allArticles' => 'All ads',
+    'yourArticles' => 'Your ads',
     'inReview' => 'Under Review',
     'published' => 'Published',
     'refused' => 'Rejected',
@@ -95,6 +109,7 @@ return [
     'delete' => 'Delete',
     'searchResults' => 'Search results',
     'noneResult' => 'No articles match your search',
+    'sellerEmail'=>'Seller email: ',
 
     //Errori
     'editMessage' => 'Your ad has been modified successfully',
@@ -108,5 +123,5 @@ return [
     'descriptionRequired' => 'Description required',
     'descriptionMin' => 'Minimum 10 characters',
     'priceRequired' => 'Price required',
-    'articleSend' => 'Ad created successfully, waiting for approval',
+    'adSend' => 'Ad created successfully, waiting for approval',
 ];

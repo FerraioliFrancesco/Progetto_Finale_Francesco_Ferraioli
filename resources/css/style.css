@@ -44,7 +44,6 @@ h6 {
 
 /* min vh layout content */
 .vh-custom {
-    
     min-height: 55vh;
 }
 
@@ -57,7 +56,7 @@ h6 {
     
 }
 
-/* navbar animatin settings */
+/* navbar animation settings */
 .margin-searchbar{
     transition: all 0.5s;
     position: sticky;
@@ -235,33 +234,55 @@ h6 {
     width: 120px;
 }
 
+/* md display revisor table */
+.d-phone{
+    display: in-line;
+}
 
 /* phone media query */
 @media screen and (max-width: 767px) {
+    /* phone collapsed navbar */
     .nav-phone{
         flex-direction: column;
     }
 
+    /* logo phone navbar */
     .logonav{
         height: 25px;
     }
 
+    /* searchbar animation phone */
+    .margin-init{
+        margin-top: 35px;
+    }
+    
+    .searchbar-in{
+        top: 35px;
+    }
+
+    /* swiper index phone */
     .swiper {
         width: 100%;
         height: 50vh;
-        
     }
+
+    /* min vh layout content */
     .vh-custom {
-    
         min-height: 30vh;
     }
+
+    /* d-none only for phone view */
+    .d-phone{
+        display: none;
+    }
+
 }
 
 /* tablet media query */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-
-    .vh-custom {
     
+    /* min vh layout content */
+    .vh-custom {
         min-height: 30vh;
     }
    
