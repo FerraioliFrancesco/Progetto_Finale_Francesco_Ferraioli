@@ -88,7 +88,7 @@ return [
     'createLivewire' => 'Create',
     'createMessageLivewire'=>'Before pressing the "create" button, make sure you have entered all the information correctly. The images will not be modifiable in the future',
     'errorTitlemessage'=>'Title required with at least 5 characters',
-    'errorDescriptionemessage'=>'Description required with at least 10 characters',
+    'errorDescriptionmessage'=>'Description required with at least 10 characters',
     'errorPricemessage'=>'Price required',
     'errorImagesValidatemessage'=>'Invalid images',
     'errorImagesSizemessage'=>'Images must have a maximum of 2MB',

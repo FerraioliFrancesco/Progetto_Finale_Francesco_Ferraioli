@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             @if (session()->has('errorMessage'))
-                <div class="col-12 alert alert-danger text-center mt-3">
+                <div class="col-12 alert alert-danger text-center m-0">
                     {{ session('errorMessage') }}
                 </div>
             @endif
             @if (session()->has('message'))
-                <div class="col-12 alert alert-success text-center mt-3">
+                <div class="col-12 alert alert-success text-center m-0">
                     {{ session('message') }}
                 </div>
             @endif
