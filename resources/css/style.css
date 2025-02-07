@@ -1,3 +1,6 @@
+/* site presets */
+
+/* site colors */
 :root {
 
     --principale: #faae3d;
@@ -5,34 +8,33 @@
     --terziario: #e9e9e9;
 
 }
-/* bg-footer */
-.bg-terziario{
-    background-color: var(--terziario);
-}
 
+/* body bg color */
 body {
-
+    
     background-color: var(--secondario);
-
+    
 }
 
+/* titles and subtitles font e settings */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-
+    
     color: var(--principale);
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-
+    
 }
 
+/* site font-type */
 * {
-
+    
     font-family: "Roboto", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -40,6 +42,7 @@ h6 {
 
 }
 
+/* min vh layout content */
 .vh-custom {
     
     min-height: 55vh;
@@ -47,12 +50,14 @@ h6 {
 
 /* navbar */
 
+/* navbar bg color */
 .navbar-custom {
 
     background-color: var(--principale);
     
 }
 
+/* navbar animatin settings */
 .margin-searchbar{
     transition: all 0.5s;
     position: sticky;
@@ -71,19 +76,6 @@ h6 {
     top: -100px;
 }
 
-
-
-
-
-/* off-canvs destro */
-
-.position-custom {
-
-    left: 35%;
-    top: 20%;
-
-}
-
 /* logo navbar */
 .ul-profile{
     flex-direction: row;
@@ -91,65 +83,62 @@ h6 {
     align-items: center;
 }
 
+/* navbar logo */
 .logonav{
     height: 50px;
 }
 
-.button-custom {
-
-    background-color: var(--terziario);
-    border-radius: 30px;
-    border-color: black;
-    color: black;
-    font-weight: 100;
-    
-}
-
+/* login and register buttons */
 .text-custom {
     color: var(--principale);
     background-color: black;
     border: 1px solid black;
 }
 
-/* carousel swiper */
+/* collapsed navbar pc user view */
+.nav-phone{
+    flex-direction: row;
+}
 
-.swiper {
-    width: 65%;
-    height: 65vh;}
+/* off-canvs right: profile */
+.position-custom {
 
-  .swiper-slide {
-    background-color: var(--secondario);
-    background-position: center;
-    background-size:cover;
-  }
-
-  .swiper-slide img {
-    display: inline-block;
-    width: auto;
-    height: 100%;
+    left: 35%;
+    top: 20%;
 
 }
 
-/* header */
-.header-c{
+/* searchbar button */
+.button-searchbar{
+    position: fixed;
+    z-index: 99;
+    bottom: 15px;
+    right: 15px;
+    background-color: #FFFFFF;
+    border-radius: 75px;
+    border: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 
-    background-image: url('C:\Users\danie\wa-hack157\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');
-    /* background-image: url('C:\Users\Marco\wa157\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg');*/
-    /* background-image: url('C:\Users\franc\wa\self-work\ProgettoFinale\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg'); */
-    /* background-image: url('C:\Users\Gallo\Aulab\ProgettoFinaleFullStack\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg'); */
-    /* background-image: url('C:\Program Files\Git\proggeti-A\Aulab_Final\presto_ferraioli_lozano_macri_gallo_araujo\public\img\img-header.jpg'); */
+/* header custom*/
+
+/* header bg image */
+.header-c{
+    background-image: url('/public/img/img-header.jpg');
     height: 90vh;
 
 }
 
+/* mdb header custom */
 .mask-vh{
-
     background-color: rgba(0, 0, 0, 0.5);
     height: 80vh;
 }
 
 /* bottone header  */
-
 .button-header{
     background-color: var(--principale);
     border-radius: 30px;
@@ -166,8 +155,37 @@ h6 {
     transition: 0.4s;
 }
 
-/* bottone card  */
+/* footer custom */
 
+/* bg-footer */
+.bg-terziario{
+    background-color: var(--terziario);
+}
+
+/* footer logo  */
+.logo-costum{
+    height: 15px;
+    width: 15px;
+}
+
+/* carousel swiper imported settings - show view*/
+.swiper {
+    width: 65%;
+    height: 65vh;}
+
+  .swiper-slide {
+    background-color: var(--secondario);
+    background-position: center;
+    background-size:cover;
+  }
+
+  .swiper-slide img {
+    display: inline-block;
+    width: auto;
+    height: 100%;
+}
+
+/* card button info/allads/yourads/header  */
 .button-card{
     background-color: var(--principale);
     border-radius: 30px;
@@ -183,53 +201,28 @@ h6 {
     transition: 0.4s ease-in-out;
 }
 
-/* bottone-searchbar */
-.button-searchbar{
-    position: fixed;
-    z-index: 99;
-    bottom: 15px;
-    right: 15px;
-    background-color: #FFFFFF;
-    border-radius: 75px;
-    border: 2px solid black;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+/* card settings*/
+
+/* cards height */
+.card-custom{
+    min-height: 500px;
 }
 
-.logo-search{
-    height: 25px;
-    width: 25px;
+/* card index height */
+.card-index-custom{
+    min-height: 50px;
 }
 
-/* bottone footer  */
-
-.logo-costum{
-    height: 15px;
-    width: 15px;
+/* card mds imported settings */
+.mask{
+    background-color: rgba(251, 251, 251, 0.15);
 }
 
-/* form  */
+/* form custom create/edit*/
 
 .form-custom{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     border-radius: 25px;
-}
- .nav-phone{
-    flex-direction: row;
- }
-
-
-
-
-
-/* article costum */
-/* .shadow-custom{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-} */
-.mask{
-    background-color: rgba(251, 251, 251, 0.15);
 }
 
 /* create-article-form images  */
@@ -242,18 +235,8 @@ h6 {
     width: 120px;
 }
 
-/* card */
 
-.card-custom{
-    min-height: 500px;
-}
-
-.card-index-custom{
-    min-height: 50px;
-}
-
-
-/* media query telefono */
+/* phone media query */
 @media screen and (max-width: 767px) {
     .nav-phone{
         flex-direction: column;
@@ -274,6 +257,7 @@ h6 {
     }
 }
 
+/* tablet media query */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
     .vh-custom {

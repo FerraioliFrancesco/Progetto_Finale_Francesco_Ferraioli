@@ -5,6 +5,7 @@ return [
     'insertAd' => 'Insert ad',
 
     //Revisor
+    'errorZoneRevisor'=>'The Revisor\'s zone is accessible only to Revisors. If you want to become a Revisor, click the footer button',
     'titleRevisor' => 'Title: ',
     'authorRevisor' => 'Author: ',
     'price' => 'Price: ',
@@ -32,6 +33,12 @@ return [
     'spoof' => 'Spoof',
     'racy' => 'Racy',
     'medical' => 'Medical',
+    'tableRevisor'=>'Table\'s Revisor',
+    'tableRevisorTitle'=>'Title',
+    'tableRevisorStatus'=>'Status',
+    'tableRevisorCategory'=>'Category',
+    'adAuthor' => 'Author',
+
 
 
     //Components

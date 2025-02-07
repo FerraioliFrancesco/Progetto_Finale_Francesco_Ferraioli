@@ -17,6 +17,11 @@ class RevisorController extends Controller
         return view('revisor.index',compact('article_to_check'));
     }
 
+    public function table(){
+        $articles = Article::orderBY('created_at','asc')->get();
+        return view('revisor.queue',compact('articles'));
+    }
+
     public function accept(Article $article){
         $article->setAccepted(true);
         return redirect()->back()->with('messageAccepted', __('ui.article')." " . $article->title . " ".__('ui.accepted'));

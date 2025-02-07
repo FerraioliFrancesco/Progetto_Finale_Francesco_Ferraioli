@@ -105,11 +105,6 @@
     <hr class="dropdown-divider">
     <div class="offcanvas-body">
         <ul>
-            {{-- <li class="my-2">
-            <div class=" me-3 mt-2 mt-md-0">
-                <a class="nav-link fw-bold text-capitalize" href="">La tua informazione</a>
-            </div>
-        </li> --}}
             @auth
                 @if (Auth::user()->is_revisor)
                     <li class="my-2">
@@ -122,6 +117,11 @@
                     </li>
                 @endif
             @endauth
+            <li class="my-2">
+                <div class="me-3 mt-2 mt-md-0">
+                     <a href="{{route('revisor.table')}}" class="nav-link fw-bold text-capitalize">{{ __('ui.tableRevisor') }}</a>
+                </div>
+            </li>
             <li class="my-2">
                 <div class=" me-3 mt-2 mt-md-0">
                     <a class="nav-link fw-bold text-capitalize" href="{{ route('article.create') }}">{{__('ui.addArticle')}}</a>

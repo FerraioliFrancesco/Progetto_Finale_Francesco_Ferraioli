@@ -22,8 +22,8 @@
                         <div class="col-md-12">
                             <div class="row justify-content-center">
                                 <div class="col-12 col-md-4 mb-4 text-center">
-                                    <img src="{{ $image->getUrl(300, 300) }}"
-                                        alt="Immagini {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
+                                    <img src="{{$image->getUrl(300, 300)}}"
+                                        alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
                                         class="img-fluid rounded shadow">
                                 </div>
                                 <div class="col-md-4  mt-5">
@@ -112,14 +112,16 @@
                 @endif
             </div>
 
-            {{-- inizio logica modal buttom reject --}}
+            {{-- start accept/reject buttons --}}
+            <div class="d-flex justify-content-center">
 
-            <div class="d-flex pb-4 justify-content-around">
-                <button type="button" class="btn btn-danger rounded-pill mb-3 fw-bold" data-bs-toggle="modal"
+                {{-- reject button (it opens the modal reject) --}}
+                <button type="button" class="btn btn-danger rounded-pill mb-3 me-2 fw-bold" data-bs-toggle="modal"
                     data-bs-target="#modalReject">
                     {{ __('ui.reject') }}
                 </button>
-                <!-- Modal reject -->
+
+                <!-- start modal reject -->
                 <div class="modal fade " id="modalReject" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
@@ -148,16 +150,16 @@
                         </div>
                     </div>
                 </div>
-                {{-- fine logica modal buttom reject --}}
+                {{-- end modal reject --}}
 
 
-                {{-- inizio logica modal buttom accept --}}
-                <button type="button" class="btn btn-success rounded-pill mb-3 fw-bold" data-bs-toggle="modal"
+                {{-- accept button (it opens the modal accept) --}}
+                <button type="button" class="btn btn-success rounded-pill mb-3 me-2 fw-bold" data-bs-toggle="modal"
                     data-bs-target="#modalAccept">
                     {{ __('ui.accept') }}
                 </button>
 
-                <!-- Modal accept -->
+                <!-- start modal accept -->
                 <div class="modal fade " id="modalAccept" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog">
@@ -187,8 +189,15 @@
                         </div>
                     </div>
                 </div>
-                {{-- fine logica modal accept --}}
+                {{-- end modal accept --}}
 
+                {{-- end accept/reject buttons --}}
+
+            </div>
+
+            {{-- button route revisor.table --}}
+            <div class="d-flex pb-4 justify-content-center">
+                <a href="{{route('revisor.table')}}" class="btn btn-warning rounded-pill fw-bold mb-3">{{ __('ui.tableRevisor') }}</a>
             </div>
         </div>
     </div>
@@ -198,7 +207,8 @@
     <div class="row justify-content-center align-items-center text-center">
         <div class="col-12">
             <p class="h1 display-4 fst-italic mb-5">{{ __('ui.noneAd') }}</p>
-            <a class="button-card px-4 py-2 rounded-pill" href="{{ route('home') }}">{{ __('ui.returnHome') }}</a>
+            <a class="button-card px-4 py-2 me-2 rounded-pill" href="{{ route('home') }}">{{ __('ui.returnHome') }}</a>
+            <a href="{{route('revisor.table')}}" class="button-card px-4 py-2 me-2 rounded-pill">{{ __('ui.tableRevisor') }}</a>
         </div>
     </div>
     @endif

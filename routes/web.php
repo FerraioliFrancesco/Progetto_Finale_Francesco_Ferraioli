@@ -17,12 +17,13 @@ Route::delete('/profile/yourArticles/destroy/{article}',[ArticleController::clas
 Route::get('/profile/yourArticles/edit/{article}',[ArticleController::class,'edit'])->middleware('auth')->name('article.edit');
 Route::put('/profile/yourArticles/update/{article}',[ArticleController::class,'update'])->middleware('auth')->name('article.update');
 
-// Route admin and revisor
+// Route revisor
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('accept');
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 ROute::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
+Route::get('/revisor/table',[RevisorController::class,'table'])->middleware('isRevisor')->name('revisor.table');
 
 // Route search 
 Route::get('/search/article',[PublicController::class, 'searchArticle'])->name('article.search');

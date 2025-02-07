@@ -5,6 +5,7 @@ return [
     'insertAd' => 'Insertar anuncio',
 
     //Revisor
+    'errorZoneRevisor'=>'La zona de revisor es accesible solo para los revisores. Si quieres convertirte en revisor, haz click en el boton del pie de pagina',
     'titleRevisor' => 'Título: ',
     'authorRevisor' => 'Autor: ',
     'price' => 'Precio: ',
@@ -32,6 +33,12 @@ return [
     'spoof' => 'Falsificacion',
     'racy' => 'Contenido sexualmente explicito',
     'medical' => 'Sangre, heridas, operaciones quirurgicas',
+    'tableRevisor'=>'Tabla de Revisor',
+    'tableRevisorTitle'=>'Título',
+    'tableRevisorStatus'=>'Estado',
+    'tableRevisorCategory'=>'Categoría',
+    'adAuthor' => 'Autor del anuncio',
+
 
     //Components
     'becomeRevisor' => 'Conviértete en revisor',
