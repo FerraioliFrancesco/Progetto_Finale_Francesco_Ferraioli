@@ -1,4 +1,4 @@
-<x-layout>
+npm --version<x-layout>
     <div class="container mt-5">
         @if (session()->has('messageAccepted'))
             <div class="row justify-content-center">
@@ -205,10 +205,10 @@
     </div>
 @else
     <div class="row justify-content-center align-items-center text-center">
-        <div class="col-12">
+        <div class="col-12 d-flex d-md-block flex-wrap justify-content-center">
             <p class="h1 display-4 fst-italic mb-5">{{ __('ui.noneAd') }}</p>
-            <a class="button-card px-4 py-2 me-2 rounded-pill" href="{{ route('home') }}">{{ __('ui.returnHome') }}</a>
-            <a href="{{route('revisor.table')}}" class="button-card px-4 py-2 me-2 rounded-pill">{{ __('ui.tableRevisor') }}</a>
+            <a class="button-card px-4 py-2 me-2 my-2 my-md-0 rounded-pill" href="{{ route('home') }}">{{ __('ui.returnHome') }}</a>
+            <a href="{{route('revisor.table')}}" class="button-card px-4 py-2 rounded-pill">{{ __('ui.tableRevisor') }}</a>
         </div>
     </div>
     @endif

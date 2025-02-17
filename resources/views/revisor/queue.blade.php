@@ -32,7 +32,7 @@
                                 <tr>
                                     <th scope="row" class="px-2 px-md-0">{{ $article->user->id }}</th>
                                     <td class="px-2 px-md-0">{{ $article->user->name }}</td>
-                                    <td class="px-2 px-md-0 text-truncate"><a href="{{ route('revisor.show',$article) }}" class="nav-link fw-bold me-1 text-capitalize ">{{$article->title}}</a></td>
+                                    <td class="px-2 px-md-0 text-truncate"><a href="{{ route('revisor.show',$article) }}" class="nav-link text-truncate fw-bold me-1 text-capitalize ">{{$article->title}}</a></td>
                                     <td class="fst-italic px-2 px-md-0 d-phone">{{ __('ui.' . $article->category->name) }}</td>
                                     <td class="px-2 px-md-0">
                                         @if ($article->is_accepted === null)
